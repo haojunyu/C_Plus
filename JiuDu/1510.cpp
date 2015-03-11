@@ -6,7 +6,7 @@
 #include<stdio.h>
 using namespace std;
 
-char arr[1000000];		# 长度为10000时,提交出现RunTime Error
+char arr[1000000];		// 长度为10000时,提交出现RunTime Error
 
 int main(){
 	//freopen("in.txt","r",stdin);						

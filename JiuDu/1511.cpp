@@ -110,7 +110,7 @@ int main(){
     //freopen("in.txt","r",stdin);                  
      
     int num;
-        stack<int> reList;
+    stack<int> reList;
     while(scanf("%d",&num) != EOF){
         if(num == -1)
             break;
