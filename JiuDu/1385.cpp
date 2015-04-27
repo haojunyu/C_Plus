@@ -1,7 +1,7 @@
 /*
  * 这题是跟二叉树相关的,所以逻辑上要很强.涉及到前序,中序,后序遍历.
  * 外加递归的思想.
- * Tips: 递归
+ * Tips: 使用递归
  */
 #include<iostream>
 #include<stdio.h>
