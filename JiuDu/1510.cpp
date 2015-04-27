@@ -13,8 +13,6 @@ int main(){
 	
 	int src_len,des_len,i,j;
 	gets(arr);
-	// show data
-	//printf("%s\n",arr);
 		
 	// deal data
 	des_len=0;
