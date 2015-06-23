@@ -1,0 +1,16 @@
+CC = g++
+CFLAGS = -g -Wall
+
+main:main.o Singleton.o
+	$(CC) main.o Singleton.o -o main
+
+main.o:main.cpp
+	$(CC)  -c main.cpp -o main.o
+
+Singleton.o:Singleton.cpp
+	$(CC) -c Singleton.cpp -o Singleton.o
+
+
+clean:
+	find . -name '*.o' -exec rm -rf {} \;
+
