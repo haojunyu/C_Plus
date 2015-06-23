@@ -5,19 +5,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-// 链表结构定义
-struct ListNode{
+// 树结构定义
+struct TreeNode{
 	int value;
-	ListNode* next;
+	TreeNode* left;
+	TreeNode* right;
 
 	// constructors
-	ListNode(){
-		next == NULL;
-	}
-
-	ListNode(int val, ListNode *add=NULL){
+	TreeNode(int val=0){
 		value = val;
-		next = add;
+		left =  NULL;
+		right = NULL;
 	}
 };
 

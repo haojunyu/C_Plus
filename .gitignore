@@ -1,4 +1,6 @@
 # 此为注释 - 将被Git忽略
-*.o				# 忽略所有.o结尾的文件
-TEST/			# 忽略TEST根目录下的所有文件
-JiuDu/resource/	# 忽略该目录下的所有文件
+*.o
+*.out
+*.swp
+TEST/		
+JiuDu/resource/	
