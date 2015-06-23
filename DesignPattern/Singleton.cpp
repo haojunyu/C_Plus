@@ -12,5 +12,5 @@ Singleton* Singleton::GetInstance(){
 }
 
 void Singleton::Show(){
-	printf("create successfully!!!\n");
+	printf("singleton's address is %p.\n",singleton);
 }
