@@ -13,29 +13,17 @@ int NumOfFac(long long n);
 // 求不超过数n的约数最多的最小的数
 long long minN;
 int numOfMinN;
-void FindMinN(long long N, long long n, int counts, int len, int maxTimes);
+void FindMinN(long long low, long long high, long long n, int counts, int len, int maxTimes);
 
 int main(){
 	freopen("in.txt","r",stdin);		//redirect the input stream
 	
-	long long i,n,min=0;
+	long long i,a,b,min=0;
 	int count = 0;
-	scanf("%lld",&n);
-	/*
-	for(i=1; i<=n; i++){
-		long long tmp = NumOfFac(i);
-		printf("%lld\t\t%lld\n",tmp,i);
-		if(tmp>count){
-			count = tmp;
-			min = i;
-		}
-	}
-	
-	printf("%lld\n",min);
-	*/
+	scanf("%lld %lld",&a,&b);
 
-	FindMinN(n, 1, 1, 0, 60);
-	printf("%lld\n%d\n", minN,numOfMinN);
+	FindMinN(a, b, 1, 1, 0, 60);
+	printf("%lld\t%d\n", minN,numOfMinN);
 
 		
 		
@@ -67,19 +55,21 @@ int NumOfFac(long long n){
 }
 
 
-void FindMinN(long long N, long long n, int counts, int len, int maxTimes){
+void FindMinN(long long low, long long high, long long n, int counts, int len, int maxTimes){
 	// update
-	if(counts > numOfMinN || (counts == numOfMinN && minN > n)){
-		numOfMinN = counts;
-		minN = n;
+	if(n<=high && n>=low){
+		if(counts > numOfMinN || (counts == numOfMinN && minN > n)){
+			numOfMinN = counts;
+			minN = n;
+		}
 	}
 
 	// find
 	int i;
 	for(i=1; i<=maxTimes; i++){
 		n = n * little_prime[len];
-		if(n > N)
+		if(n > high)
 			break;
-		FindMinN(N, n, counts*(i+1), len+1, i);
+		FindMinN(low, high, n, counts*(i+1), len+1, i);
 	}
 }
