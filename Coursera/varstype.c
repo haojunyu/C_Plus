@@ -2,11 +2,13 @@
 
 // struct
 struct student{
-    char name[10];
+    /* char name[10]; */
     int age;
-    char sex;
-    int a;
-    char b,c;
+    double weight;
+    float height;
+    /* char sex; */
+    /* char a; */
+    /* char b,c; */
 };
 
 // union
@@ -22,20 +24,7 @@ enum days{mon,tue,wed,thu,fri,sat,sun};
 
 int main(){
     // 基本数据类型
-    void *vp;
-    printf("sizeof(void) is %ld byte.\n",sizeof(void));
-    printf("sizeof(void*) is %ld byte.\n",sizeof(void*));
-    printf("sizeof(void* variable) is %ld byte.\n",sizeof(vp));
-    printf("\n");
-
-    char c,*cp;
-    printf("sizeof(char) is %ld byte.\n",sizeof(char));
-    printf("sizeof(char*) is %ld byte.\n",sizeof(char*));
-    printf("sizeof(char variable) is %ld byte.\n",sizeof(c));
-    printf("sizeof(char* variable) is %ld byte.\n",sizeof(cp));
-    printf("\n");
-
-    short s,*sp;
+	short s,*sp;
     printf("sizeof(short) is %ld byte.\n",sizeof(short));
     printf("sizeof(short*) is %ld byte.\n",sizeof(short*));
     printf("sizeof(short variable) is %ld byte.\n",sizeof(s));
@@ -69,6 +58,19 @@ int main(){
     printf("sizeof(double variable) is %ld byte.\n",sizeof(d));
     printf("sizeof(double* variable) is %ld byte.\n",sizeof(dp));
     printf("\n");
+    
+    char c,*cp;
+    printf("sizeof(char) is %ld byte.\n",sizeof(char));
+    printf("sizeof(char*) is %ld byte.\n",sizeof(char*));
+    printf("sizeof(char variable) is %ld byte.\n",sizeof(c));
+    printf("sizeof(char* variable) is %ld byte.\n",sizeof(cp));
+    printf("\n");
+
+	void *vp;
+    printf("sizeof(void) is %ld byte.\n",sizeof(void));
+    printf("sizeof(void*) is %ld byte.\n",sizeof(void*));
+    printf("sizeof(void* variable) is %ld byte.\n",sizeof(vp));
+    printf("\n");
 
 
     printf("----------------\n");
@@ -77,7 +79,7 @@ int main(){
     printf("sizeof(struct student) is %ld byte.\n",sizeof(struct student));
     printf("sizeof(struct student*) is %ld byte.\n",sizeof(struct student*));
     printf("sizeof(struct student variable) is %ld byte.\n",sizeof(st));
-    printf("sizeof(struct inline variable) is %ld byte.\n",sizeof(st.name));
+    /* printf("sizeof(struct inline variable) is %ld byte.\n",sizeof(st.name)); */
     printf("sizeof(struct student* variable) is %ld byte.\n",sizeof(stu));
     printf("\n");
 
