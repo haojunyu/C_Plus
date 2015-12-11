@@ -1,10 +1,10 @@
-///@file    exer14_1.c
-///@brief   Coursera上C语言进阶课程第二周第一题
+///@file    exer15_1.c
+///@brief   Coursera上C语言进阶课程第三周第一题：单词翻转
 ///@author  hjy
 
 #include<stdio.h>
 
-int arr[100];
+char arr[500];
 
 int main(){
     int i,n;
