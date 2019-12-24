@@ -1,6 +1,9 @@
 *.o
 *.out
+*.in
 *.swp
 TEST/		
 JiuDu/resource/	
 *.io
+*.dSYM
+.vscode

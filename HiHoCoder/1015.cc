@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 
 char ori[1000000];
 char pat[10000];
